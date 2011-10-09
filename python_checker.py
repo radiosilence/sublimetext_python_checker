@@ -64,7 +64,7 @@ def check_and_mark(view):
             messages += tmp
             for line in tmp:
                 print "[%s] %s:%s:%s %s" % (checker.split('/')[-1],
-                    view.file_name(), line['lineno'],
+                    view.file_name(), line['lineno'] + 1,
                     line['col'], line['text'])
         except OSError:
             print "Checker could not be found:", checker
